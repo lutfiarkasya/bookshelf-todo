@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Form Input Wave</title>
+  </head>
+  <body>
+    <section class="book-form">
+      <div class="wrap">
+        <div class="container">
+          <h1>Todo App Buku</h1>
+          <form id="bookForm">
+            <div class="form-control">
+              <input type="text" id="title" required />
+              <label>Judul Buku</label>
+            </div>
+  
+            <div class="form-control">
+              <input type="text" id="author" required />
+              <label>Author</label>
+            </div>
+            <div class="form-control">
+              <input type="number" id="year" required />
+              <label>Tanggal</label>
+            </div>
+            <div class="form-control">
+              <input type="checkbox" id="isComplete" />
+              <span class="complete">Selesai Dibaca</span>
+            </div>
+  
+            <button class="btn">Simpan</button>
+          </form>
+        </div>
+      </div>  
+    </section>
+
+    
+    <section class="shelf-books">
+      <div class="search">
+        <h2>Cari Buku</h2>
+        <input type="text" id="searchInput" placeholder="Search Title" />
+        <button id="searchBtn" class="searchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="shelf" id="uncompletedShelf">
+        <h2>Belum Selesai Dibaca</h2>
+        <ul class="book-list" id="uncompletedBooks">
+          <!-- List Buku Disini -->
+        </ul>
+      </div>
+      <div class="shelf" id="completedShelf">
+        <h2>Selesai Dibaca</h2>
+        <ul class="book-list" id="completedBooks">
+          <!-- List Buku Disini -->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="edit-book-form">
+      <div class="container overlay" id='editOverlay'>
+        <form id="editBookForm">
+          <h2>Ubah Buku</h2>
+          <div class="form-control edit">
+            <input type="text" id="editTitle" required />
+            <label>Judul Buku</label>
+          </div>
+
+          <div class="form-control edit">
+            <input type="text" id="editAuthor" required />
+            <label>Author</label>
+          </div>
+          <div class="form-control edit">
+            <input type="number" id="editYear" required />
+            <label>Tanggal</label>
+          </div>
+          <div class="button-box">
+            <button class="edit-button" id='editBtn'>Edit</button>
+            <button class="cancel-button" id='cancelBtn'>Batal</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="delete-book">
+      <div class="overlay" id="deleteOverlay">
+        <div class="delete-box">
+          <h2>Hapus Buku</h2>
+          <p>Apakah kamu yakin ingin menghapus data Buku ini ?</p>
+          <div class="button-box">
+            <button id="confirmDeleteButton">Hapus</button>
+            <button id="cancelDeleteButton">Batal</button>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
